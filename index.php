@@ -1,13 +1,36 @@
 <?php
 
   include 'header.php';
-  $tasks = $db->query('SELECT * FROM tasks')->fetchAll(PDO::FETCH_ASSOC);
+  $contacts = $db->query('SELECT * FROM contacts')->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-<form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
-</form>
+
+
+<h1 class="contact-list">Contact List <span>(<?= count($contacts); ?>)</span></h1>
+
+<div class="container">
+
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+
+<table class="table table-responsive">
+  <tbody>
+    <?php foreach($contacts as $contact) : ?>
+
+    <tr>
+      <td class="id"><a href="/edit.php?id=<?= $contact['id']; ?>"><?= $contact['id']; ?></a></td>
+      <td><a class="image" href="/edit.php?photo=<?= $contact['photo'];?>"><img src="<?= $contact['photo']; ?>"></a></td>
+      <td><a href="/edit.php?image=<?= $contact['photo'];?>"><?= $contact['first name'] . " " . $contact['last name'];?></a></td>
+      <td><a href="/edit.php?city=<?= $contact['city'];?>"><?= $contact['city']; ?></a></td>
+      <td><a href="/edit.php?state=<?= $contact['state'];?>"><?= $contact['state']; ?></a></td>
+      <td><a href="/edit.php?phone=<?= $contact['phone'];?>"><?= $contact['phone']; ?></a></td>
+    </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>
+
+
+
 
 <?php include 'footer.php'; ?>
