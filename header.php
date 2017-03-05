@@ -22,12 +22,12 @@
       <div class="row">
 
         <div class="col-md-12">
-          <img src="img/icon.svg" width="350px" height="auto">
+        <!---  <a href="index.php"><img src="img/icon.svg" width="350px" height="auto"></a> ---->
         </div>
         <div class="col-md-12 navbar">
           <ul>
-            <li>Style Guide</li>
-            <li>Create</li>
+            <li>Style Guide</a></li>
+            <a href="new.php"><li>Create</li></a>
             <li>All Contacts</li>
         </ul>
         </div>
@@ -36,5 +36,3 @@
 
       </div>
     </div>
-
-  

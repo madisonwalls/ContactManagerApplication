@@ -20,11 +20,11 @@
 
     <tr>
       <td class="id"><a href="/edit.php?id=<?= $contact['id']; ?>"><?= $contact['id']; ?></a></td>
-      <td><a class="image" href="/edit.php?photo=<?= $contact['photo'];?>"><img src="<?= $contact['photo']; ?>"></a></td>
-      <td><a href="/edit.php?image=<?= $contact['photo'];?>"><?= $contact['first name'] . " " . $contact['last name'];?></a></td>
-      <td><a href="/edit.php?city=<?= $contact['city'];?>"><?= $contact['city']; ?></a></td>
-      <td><a href="/edit.php?state=<?= $contact['state'];?>"><?= $contact['state']; ?></a></td>
-      <td><a href="/edit.php?phone=<?= $contact['phone'];?>"><?= $contact['phone']; ?></a></td>
+      <td><a class="image" href="/edit.php?id=<?= $contact['id'];?>"><img src="uploads/<?= $contact['photo']; ?>"></a></td>
+      <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['first'] . " " . $contact['last'];?></a></td>
+      <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['city']; ?></a></td>
+      <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['state']; ?></a></td>
+      <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['phone']; ?></a></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
