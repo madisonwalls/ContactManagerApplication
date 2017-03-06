@@ -6,39 +6,51 @@ include 'header.php';
 
 <h1>Create Contact</h1>
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
 <form method="POST" action="/create.php">
 
-  <div class="form-group">
+  <div class="form-group title">
+    <label for="contact_title">Title</label>
+    <select name="title" id="contact_title" class="form-control">
+      <option value="Mr" selected>Mr</option>
+      <option value="Mrs">Mrs</option>
+      <option value="Miss">Miss</option>
+      <option value="Ms">Ms</option>
+      <option value="Dr">Dr</option>
+      <option value="">None</option>
+    </select>
+  </div>
+
+  <div class="form-group firstname">
     <label for="contact_first">First Name</label>
     <input class="form-control" type="text" name="first" id="contact_first" value="" placeholder="First Name"/>
   </div>
 
-  <div class="form-group">
+  <div class="form-group lastname">
     <label for="contact_last">Last Name</label>
     <input class="form-control" type="text" name="last" id="contact_last" value=""  placeholder="Last Name"/>
   </div>
-
-    <div class="form-group">
-      <label for="contact_title">Title</label>
-      <input class="form-control" type="text" name="last" id="contact_title" value="" placeholder="Title"/>
-    </div>
 
     <div class="form-group">
       <label for="contact_address">Address</label>
       <input class="form-control" type="text" name="address" id="contact_address" value="" placeholder="Address"/>
     </div>
 
-    <div class="form-group">
+    <div class="form-group city">
       <label for="contact_city">City</label>
       <input class="form-control" type="text" name="city" id="contact_city" value="" placeholder="City"/>
     </div>
 
-    <div class="form-group">
+    <div class="form-group state">
       <label for="contact_state">State</label>
       <input class="form-control" type="text" name="state" id="contact_state" value="" placeholder="State"/>
     </div>
 
-    <div class="form-group">
+    <div class="form-group zipcode">
       <label for="zip">Zip Code</label>
       <input class="form-control" type="text" name="zip" id="contact_zip" value="" placeholder="Zip Code"/>
     </div>
@@ -50,7 +62,7 @@ include 'header.php';
 
     <div class="form-group">
       <label for="notes">Notes</label>
-      <input class="form-control" type="text" name="notes" id="contact_notes" value="" placeholder="Notes"/>
+      <textarea class="form-control" type="text" name="notes" id="contact_notes" value="" placeholder="Notes"></textarea>
     </div>
 
 
@@ -58,5 +70,8 @@ include 'header.php';
 
 </form>
 
+</div>
+</div>
+</div
 
 <?php include 'footer.php'; ?>

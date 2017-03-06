@@ -8,6 +8,13 @@
     src: url(../fonts/Lato-Thin.ttf);
 }
 
+body {
+  padding-bottom: 30px;
+}
+
+a:hover {
+  text-decoration: none;
+}
 
 .navtop {
   background-color: #B56357;
@@ -62,20 +69,43 @@
 
 }
 
+.styleguide h2, h3, h4, h5, h6{
+  color: #000000;
+  font-family: Lato-thin;
+}
+
+.styleguide h1 {
+  color: #000000;
+  font-family: Lato-thin;
+  background-color: inherit;
+  font-weight: bold;
+  padding: 0px;
+  text-align: left;
+  margin-bottom: 0px;
+  font-weight: inherit;
+
+}
+
+
 table td:first-child a {
   color: #ffffff;
   padding: 20px 18px;
   background-color: #B56357;
-  margin: 20px;
+  position: relative;
+  top: 27px;
+  margin-right: 20px;
+
 }
 
 
 
 table td:nth-child(2) img {
-  width: 150px;
+  width: 105px;
   height: auto;
   border-radius: 50%;
   vertical-align: middle;
+  position: relative;
+
 
 }
 
@@ -84,11 +114,15 @@ table td:nth-child(2) {
   padding: 0px;
   border-radius: 50%;
   width: 50px;
+  position: relative;
+  top: 27px;
 }
 
 table td:nth-child(2) img:hover {
   border: 5px solid #B56357;
   opacity: 0.5;
+  position: relative;
+
 }
 
 table td:nth-child(3) a {
@@ -98,26 +132,69 @@ font-size: 30px;
 margin-left: 15px;
 }
 
-table td:nth-child(4) a {
+.innerInfo td:nth-child(2) {
 font-family: Lato;
 color: #A7B3A5;
 font-size: 20px;
+background-color: inherit;
 }
 
-table td:nth-child(5) a {
+.innerInfo td:nth-child(3) a {
 font-family: Lato;
 color: #A7B3A5;
 font-size: 20px;
+
 }
 
-table td:nth-child(6) a {
-font-family: Lato;
-color: #A7B3A5;
-font-size: 20px;
-}
 
 .table>tbody>tr>td {
   border-top: none;
   vertical-align: middle;
   padding: 0px;
+}
+
+
+.title {
+  width: 9%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.firstname {
+  width: 44%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.lastname {
+  width: 44%;
+  display: inline-block;
+}
+
+.address {
+  width: 59%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.city {
+  width: 30%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.state {
+  width: 8%;
+  display: inline-block;
+}
+
+.zipcode {
+  width: 49%;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.phone {
+  width: 49%;
+  display: inline-block;
 }

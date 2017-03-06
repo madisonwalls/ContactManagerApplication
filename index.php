@@ -12,9 +12,9 @@
 
     <div class="row">
 
-      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+      <div class="col-xs-12 col-sm-12 col-md-7 col-md-offset-3">
 
-<table class="table table-responsive">
+<table class="table tableStyle">
   <tbody>
     <?php foreach($contacts as $contact) : ?>
 
@@ -22,10 +22,12 @@
       <td class="id"><a href="/edit.php?id=<?= $contact['id']; ?>"><?= $contact['id']; ?></a></td>
       <td><a class="image" href="/edit.php?id=<?= $contact['id'];?>"><img src="uploads/<?= $contact['photo']; ?>"></a></td>
       <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['first'] . " " . $contact['last'];?></a></td>
-      <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['city']; ?></a></td>
-      <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['state']; ?></a></td>
-      <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['phone']; ?></a></td>
     </tr>
+        <tr class="innerInfo">
+          <td></td>
+          <td></td>
+          <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['city']; ?></a><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['state']; ?></a><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['phone']; ?></a></td>
+        </tr>
     <?php endforeach; ?>
   </tbody>
 </table>
