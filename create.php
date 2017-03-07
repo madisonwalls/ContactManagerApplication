@@ -3,14 +3,20 @@
 include 'database.php';
 
 $stmt = $db->prepare("INSERT INTO contacts
-  (first, last)
+  (first, last, address, city, state, zip, phone, notes)
   VALUES
-  (:first, :last)
+  (:first, :last, :address, :city, :state, :zip, :phone, :notes)
 ");
 
 $stmt->execute(array(
   ':first' => $_POST['first'],
-  ':last' => $_POST['last']
+  ':last' => $_POST['last'],
+  ':address' => $_POST['address'],
+  ':city' => $_POST['city'],
+  ':state' => $_POST['state'],
+  ':zip' => $_POST['zip'],
+  ':phone' => $_POST['phone'],
+  ':notes' => $_POST['notes'],
 ));
 
 $id = $db->lastInsertID();

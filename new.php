@@ -9,19 +9,19 @@ include 'header.php';
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-10 col-md-offset-1">
 
 <form method="POST" action="/create.php">
 
   <div class="form-group title">
     <label for="contact_title">Title</label>
     <select name="title" id="contact_title" class="form-control">
-      <option value="Mr" selected>Mr</option>
+      <option value="Mr">Mr</option>
       <option value="Mrs">Mrs</option>
       <option value="Miss">Miss</option>
       <option value="Ms">Ms</option>
       <option value="Dr">Dr</option>
-      <option value="">None</option>
+      <option value="" selected >---</option>
     </select>
   </div>
 
@@ -35,7 +35,7 @@ include 'header.php';
     <input class="form-control" type="text" name="last" id="contact_last" value=""  placeholder="Last Name"/>
   </div>
 
-    <div class="form-group">
+    <div class="form-group address">
       <label for="contact_address">Address</label>
       <input class="form-control" type="text" name="address" id="contact_address" value="" placeholder="Address"/>
     </div>
@@ -55,18 +55,18 @@ include 'header.php';
       <input class="form-control" type="text" name="zip" id="contact_zip" value="" placeholder="Zip Code"/>
     </div>
 
-    <div class="form-group">
+    <div class="form-group phone">
       <label for="phone">Phone</label>
       <input class="form-control" type="text" name="phone" id="contact_phone" value="" placeholder="Phone" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group notes">
       <label for="notes">Notes</label>
       <textarea class="form-control" type="text" name="notes" id="contact_notes" value="" placeholder="Notes"></textarea>
     </div>
 
 
-  <button class="btn btn-primary">Create</button>
+  <button class="btn regularButton">Create</button>
 
 </form>
 

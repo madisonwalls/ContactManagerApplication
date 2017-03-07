@@ -14,7 +14,7 @@
 
 <?php if (array_key_exists('updated', $_GET)) : ?>
 <div class="alert alert-success">
-  <p><strong>Update successful!</strong>. Your task was updated.</p>
+  <p><strong>Update successful!</strong> Your contact was updated.</p>
 </div>
 <?php endif; ?>
 
@@ -31,8 +31,8 @@
 <form action="upload.php" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
     Change Image:
-    <input type="file" name="photo" id="photo" value="<?= $contact['photo']; ?>">
-    <input type="submit" value="Update Image" name="submit">
+    <input type="file" name="photo" id="photo"/>
+    <input class="smallButton" type="submit" value="Update Image" name="submit">
 </form>
 
 <form method="POST" action="/update.php">
@@ -91,7 +91,7 @@
   </div>
 
 
-  <button class="btn btn-primary">Save Task</button>
+  <button class="btn regularButton">Save Task</button>
 
 </form>
 

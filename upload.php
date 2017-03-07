@@ -1,5 +1,6 @@
 <?php
 
+include 'database.php';
 
 
 $target_dir = "uploads/";
@@ -7,7 +8,7 @@ $target_file = $target_dir . basename($_FILES["photo"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-include 'database.php';
+
 
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
@@ -46,6 +47,13 @@ if ($uploadOk == 0) {
 
     }
 }
+
+$stmt = $db->prepare('UPDATE contacts SET photo = :photo WHERE id = :id');
+//$stmt->bindParam
+$stmt->execute(array(
+  ':id' => $_POST['id'],
+  ':photo' => $_target_file,
+));
 
 header('Location: http://localhost:8888/edit.php?updated=true&id=' . $_POST['id']);
 
