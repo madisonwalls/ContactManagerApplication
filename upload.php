@@ -52,7 +52,7 @@ $stmt = $db->prepare('UPDATE contacts SET photo = :photo WHERE id = :id');
 //$stmt->bindParam
 $stmt->execute(array(
   ':id' => $_POST['id'],
-  ':photo' => $_target_file,
+  ':photo' => basename($_FILES["photo"]["name"]),
 ));
 
 header('Location: http://localhost:8888/edit.php?updated=true&id=' . $_POST['id']);

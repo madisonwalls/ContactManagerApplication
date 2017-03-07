@@ -14,7 +14,7 @@
 
 <?php if (array_key_exists('updated', $_GET)) : ?>
 <div class="alert alert-success">
-  <p><strong>Update successful!</strong> Your contact was updated.</p>
+  <p><strong>Update successful!</strong> Your photo was updated.</p>
 </div>
 <?php endif; ?>
 

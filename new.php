@@ -10,6 +10,15 @@ include 'header.php';
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
+      <?php if (array_key_exists('updated', $_GET)) : >
+      <img src="uploads/<?= $contact['photo']; ?>" width="100px" height="auto">
+  
+      <form action="upload.php" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
+         <p>Add a Contact Image:</p>
+          <input type="file" name="photo" id="photo"/>
+          <input class="smallButton" type="submit" value="Update Image" name="submit">
+      </form>
 
 <form method="POST" action="/create.php">
 
