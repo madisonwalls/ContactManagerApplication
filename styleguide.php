@@ -15,12 +15,12 @@ include 'header.php';
       <div class="color2"><p>Seafoam #A7B3A5</p></div>
       <div class="color3"><p>Hunter #5E635C</p></div>
       </br>
-      <div class="color4"><p>Coral #FF988D</p></div>
-      <div class="color5"><p>Rust #B56357</p></div>
-      <div class="color6"><p>Plum #563330</p></div>
+      <div class="color4"><p>Cotton #FF988D</p></div>
+      <div class="color5"><p>Bluebell #B56357</p></div>
+      <div class="color6"><p>Jeans #563330</p></div>
       </br>
-      <div class="color7"><p>Slate #EAE3EA</p></div>
-      <div class="color8"><p>Jeans #5C6F91</p></div>
+      <div class="color7"><p>Sun #EAE3EA</p></div>
+      <div class="color8"><p>Mustard #5C6F91</p></div>
       <div class="color9"><p>Antique #353F55</p></div>
       </br>
       <div class="color10"><p>Clean #ffffff</p></div>
@@ -68,14 +68,15 @@ include 'header.php';
       <button type="button" name="button" class="smallButton">Small Button</button>
       <button type="button" name="button" class="regularButton">Regular Button</button>
       <button type="button" name="button" class="largeButton">Large Button</button>
+      <button type="button" name="button" class="deleteButton">Delete Button</button>
     </div>
     <div class="col-sm-4 specialHeaders sideline">
       <h2>Inputs</h2>
     </div>
     <div class="col-sm-8 inputs">
-     <input type="text" name="" value="">
-     <input type="text" name="" value="">
-     <input type="text" name="" value="">
+     <input class="inputField" type="text" name="" value="" placeholder="Example Input Field">
+     <textarea class="textareaInput" type="text" name="" value="" placeholder="Example Text Area Field"></textarea>
+     <select class="selectInput" type="text" name="" value="">
     </div>
     <div class="col-sm-4 specialHeaders sideline">
       <h2>Lists</h2>

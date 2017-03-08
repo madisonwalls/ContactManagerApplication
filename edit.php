@@ -25,8 +25,9 @@
 
 <a href="/delete.php?id=<?= $contact['id']; ?>" class="btn btn-danger pull-right">Delete Contact</a>
 
-
+<?php if ($contact['photo'] !== '') :  ?>
 <img src="uploads/<?= $contact['photo']; ?>" width="100px" height="auto">
+<?php endif; ?>
 
 <form action="upload.php" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
