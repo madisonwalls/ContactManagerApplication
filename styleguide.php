@@ -11,21 +11,30 @@ include 'header.php';
       <h2>Colors</h2>
     </div>
     <div class="col-sm-8">
-      <div class="color1"><p>Mint #B4DBC0</p></div>
-      <div class="color2"><p>Seafoam #A7B3A5</p></div>
-      <div class="color3"><p>Hunter #5E635C</p></div>
+      <div class="color1"><p>Mint #CAE4DB</p></div>
+      <div class="color2"><p>Seafoam #7A9D96</p></div>
+      <div class="color3"><p>Hunter #319B86</p></div>
       </br>
-      <div class="color4"><p>Cotton #FF988D</p></div>
-      <div class="color5"><p>Bluebell #B56357</p></div>
-      <div class="color6"><p>Jeans #563330</p></div>
+      <div class="color4"><p>Cotton #659ba8</p></div>
+      <div class="color5"><p>Bluebell #0088a8</p></div>
+      <div class="color6"><p>Jeans #00303f</p></div>
       </br>
-      <div class="color7"><p>Sun #EAE3EA</p></div>
-      <div class="color8"><p>Mustard #5C6F91</p></div>
-      <div class="color9"><p>Antique #353F55</p></div>
+      <div class="color7"><p>Sun #DBC179</p></div>
+      <div class="color8"><p>Mustard #DCAE1D</p></div>
+      <div class="color9"><p>Antique #BA8900</p></div>
       </br>
       <div class="color10"><p>Clean #ffffff</p></div>
       <div class="color11"><p>Wired #999999</p></div>
       <div class="color12"><p>Night #000000</p></div>
+    </div>
+    <div class="col-sm-4 specialHeaders sideline">
+      <h2>Typography</h2>
+    </div>
+    <div class="col-sm-8 typography">
+      <p class="Lato-Hairline">Lato-Hairline</p>
+      <p class="Lato-Thin">Lato-Thin</p>
+      <p class="Lato">Lato</p>
+      <p class="Lato-Bold">Lato-Bold</p>
     </div>
     <div class="col-sm-4 specialHeaders sideline">
       <h2>Headings</h2>
@@ -71,24 +80,37 @@ include 'header.php';
       <button type="button" name="button" class="deleteButton">Delete Button</button>
     </div>
     <div class="col-sm-4 specialHeaders sideline">
+      <h2>Lists</h2>
+    </div>
+    <div class="col-sm-8 styleLists">
+     <ul>
+       <li>This is an example of a list item.</li>
+       <li>Another chance to see what a list item looks like.</li>
+       <li>For example purposes, here is a list item.</li>
+       <li>This is the styleguide for this contact manager.</li>
+       <li>Here is the last example on this list.</li>
+    </ul>
+    <ol>
+      <li>This is an example of a list item.</li>
+      <li>Another chance to see what a list item looks like.</li>
+      <li>For example purposes, here is a list item.</li>
+      <li>This is the styleguide for this contact manager.</li>
+      <li>Here is the last example on this list.</li>
+    </ol>
+    </div>
+    <div class="col-sm-4 specialHeaders sideline">
       <h2>Inputs</h2>
     </div>
-    <div class="col-sm-8 inputs">
+    <div class="col-sm-8 styleInputs">
      <input class="inputField" type="text" name="" value="" placeholder="Example Input Field">
      <textarea class="textareaInput" type="text" name="" value="" placeholder="Example Text Area Field"></textarea>
      <select class="selectInput" type="text" name="" value="">
+       <option value="Example 1">Example 1</option>
+       <option value="Example 2">Example 2</option>
+       <option value="Example 3">Example 3</option>
     </div>
-    <div class="col-sm-4 specialHeaders sideline">
-      <h2>Lists</h2>
-    </div>
-    <div class="col-sm-8 lists">
-     <ul>
-       <li></li>
-    </ul>
-    <ol>
-      <li></li>
-    </ol>
-    </div>
+
+
   </div>
 
 </div>

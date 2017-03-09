@@ -27,9 +27,13 @@
 
 <p class="inputTitles">Contact Image</p>
 <form action="upload.php" method="POST" enctype="multipart/form-data"  class="imageChange">
-  <?php if ($contact['photo'] !== '') :  ?>
-  <img src="uploads/<?= $contact['photo']; ?>" width="150px" height="auto">
-  <?php endif; ?>
+  <?php
+  if ($contact['photo'] !== '') {
+      echo "<img src='uploads/";  echo $contact['photo']; echo "' width='150px' height='auto'>";
+  } else {
+      echo "<img src='uploads/picIcon.png' width='150px' height='auto'>";
+  }
+  ?>
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
     <input class="fileSelection" type="file" name="photo" id="photo"/>
     <input class="smallButton imageSave" type="submit" value="Save Image" name="submit">
@@ -43,7 +47,7 @@
 
   <div class="form-group title">
     <label for="contact_title"><p class="inputTitles">Title</p></label>
-    <select name="title" id="contact_title" class="form-control selectInput">
+    <select name="title" id="contact_title" class="form-control selectInputEdit">
       <option value="Mr" <?= ($contact['title'] == 'Mr') ? ' selected' : '' ?>>Mr</option>
       <option value="Mrs"<?= ($contact['title'] == 'Mrs') ? ' selected' : '' ?>>Mrs</option>
       <option value="Miss"<?= ($contact['title'] == 'Miss') ? ' selected' : '' ?>>Miss</option>
@@ -94,7 +98,7 @@
   </div>
 
 
-  <button class="btn regularButton">Save Task</button>
+  <button class="btn regularButton">Save Contact</button>
 
 </form>
 

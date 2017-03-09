@@ -24,7 +24,7 @@ $contact = $stmt->fetch(PDO::FETCH_ASSOC);
       if ($contact['photo'] !== '') {
           echo "<img src='uploads/";  echo $contact['photo']; echo "' width='150px' height='auto'>";
       } else {
-          echo "<img src='uploads/picIcon.png' width='150px' height='auto'>";
+          echo "<img class='yellowMan' src='uploads/picIcon.png' width='150px' height='auto'>";
       }
       ?>
 
@@ -32,8 +32,8 @@ $contact = $stmt->fetch(PDO::FETCH_ASSOC);
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
 
   <div class="form-group title">
-    <label for="contact_title">Title</label>
-    <select name="title" id="contact_title" class="form-control selectInput">
+    <label for="contact_title"><p class="inputTitles">Title</p></label>
+    <select name="title" id="contact_title" class="form-control selectInputEdit">
       <option value="Mr">Mr</option>
       <option value="Mrs">Mrs</option>
       <option value="Miss">Miss</option>
@@ -44,42 +44,42 @@ $contact = $stmt->fetch(PDO::FETCH_ASSOC);
   </div>
 
   <div class="form-group firstname">
-    <label for="contact_first">First Name</label>
+    <label for="contact_first"><p class="inputTitles">First Name</p></label>
     <input class="form-control inputField" type="text" name="first" id="contact_first" value="" placeholder="First Name"/>
   </div>
 
   <div class="form-group lastname">
-    <label for="contact_last">Last Name</label>
+    <label for="contact_last"><p class="inputTitles">Last Name</p></label>
     <input class="form-control inputField" type="text" name="last" id="contact_last" value=""  placeholder="Last Name"/>
   </div>
 
     <div class="form-group address">
-      <label for="contact_address">Address</label>
+      <label for="contact_address"><p class="inputTitles">Address</p></label>
       <input class="form-control inputField" type="text" name="address" id="contact_address" value="" placeholder="Address"/>
     </div>
 
     <div class="form-group city">
-      <label for="contact_city">City</label>
+      <label for="contact_city"><p class="inputTitles">City</p></label>
       <input class="form-control inputField" type="text" name="city" id="contact_city" value="" placeholder="City"/>
     </div>
 
     <div class="form-group state">
-      <label for="contact_state">State</label>
+      <label for="contact_state"><p class="inputTitles">State</p></label>
       <input class="form-control inputField" type="text" name="state" id="contact_state" value="" placeholder="State"/>
     </div>
 
     <div class="form-group zipcode">
-      <label for="zip">Zip Code</label>
+      <label for="zip"><p class="inputTitles">Zip Code</p></label>
       <input class="form-control inputField" type="text" name="zip" id="contact_zip" value="" placeholder="Zip Code"/>
     </div>
 
     <div class="form-group phone">
-      <label for="phone">Phone</label>
+      <label for="phone"><p class="inputTitles">Phone</p></label>
       <input class="form-control inputField" type="text" name="phone" id="contact_phone" value="" placeholder="Phone" />
     </div>
 
     <div class="form-group notes">
-      <label for="notes">Notes</label>
+      <label for="notes"><p class="inputTitles">Notes</p></label>
       <textarea class="form-control textareaInput" type="text" name="notes" id="contact_notes" value="" placeholder="Notes"></textarea>
     </div>
 

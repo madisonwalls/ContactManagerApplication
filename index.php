@@ -12,7 +12,7 @@
 
     <div class="row">
 
-      <div class="col-xs-11 col-xs-offset-1 col-md-9 col-md-offset-3 tableContainer">
+      <div class="col-xs-12 col-md-9 col-md-offset-3 tableContainer">
 
 <table class="table">
   <?php foreach($contacts as $contact) : ?>

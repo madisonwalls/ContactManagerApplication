@@ -215,7 +215,7 @@ table {
 }
 
 .address {
-  width: 59%;
+  width: 56%;
   display: inline-block;
   margin-right: 6px;
 }
@@ -227,7 +227,7 @@ table {
 }
 
 .state {
-  width: 8%;
+  width: 11%;
   display: inline-block;
 }
 
@@ -271,20 +271,23 @@ table {
 }
 .paragraphs {
   font-family: Lato;
-  font-size: 14px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .light-text {
   font-family: Lato-Hairline;
-  font-size: 20px;
+  font-size: 16px;
   color: grey;
   letter-spacing: 0.05em;
+  margin-bottom: 10px;
 }
 
 .lead-text {
   font-family: lato;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 800;
+  margin-bottom: 10px;
 }
 
 .color1 {
@@ -296,11 +299,18 @@ table {
   margin-bottom: 40px;
 }
 
-.color1 p, .color2 p, .color3 p, .color4 p, .color5 p, .color6 p, .color7 p, .color8 p, .color9 p, .color10 p, .color11 p, .color12 p {
+.color1 p, .color2 p, .color3 p, .color4 p, .color5 p, .color6 p, .color7 p, .color9 p, .color10 p, .color11 p, .color12 p {
   position: relative;
   top: 100px;
   font-family: Lato-thin;
   font-size: 12px;
+}
+
+.color8 p {
+  position: relative;
+  top: 100px;
+  font-family: Lato-thin;
+  font-size: 11px;
 }
 
 
@@ -411,61 +421,62 @@ table {
 
 .regularButton {
   border: none;
-  background-color: #CAE4DB;
+  background-color: #659ba8;
   color: #ffffff;
   padding: 10px 20px;
   border-radius: 5px;
   font-family: Lato;
   font-size: 12px;
   font-weight: 800;
-  border-bottom: 3px solid #A7B3A5;
+  border-bottom: 3px solid #00303f;
   display: block;
   margin-top: 20px;
 }
 
 .regularButton:hover {
-  background-color: #5E635C;
+  background-color: #00303f;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
   display: block;
 }
 
-.smallButton {
+.smallButton, .smallButtonCreate {
   border: none;
-  background-color: #CAE4DB;
+  background-color: #659ba8;
   color: #ffffff;
   border-radius: 5px;
   font-family: Lato-thin;
   font-size: 12px;
   font-weight: 800;
-  border-bottom: 3px solid #A7B3A5;
+  border-bottom: 3px solid #00303f;
   padding: 5px;
   display: block;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
-.smallButton:hover {
-  background-color: #5E635C;
+.smallButton:hover, .smallButtonCreate:hover {
+  background-color: #00303f;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
 }
 
 .largeButton {
   border: none;
-  background-color: #CAE4DB;
+  background-color: #659ba8;
   color: #ffffff;
   border-radius: 5px;
   font-family: Lato;
   font-size: 14px;
   font-weight: 800;
-  border-bottom: 3px solid #A7B3A5;
-  padding: 25px 40px;
+  border-bottom: 3px solid #00303f;
+  padding: 20px 35px;
   display: block;
-  margin: 20px;
+  margin-top: 20px;
+
 }
 
 .largeButton:hover {
-  background-color: #5E635C;
+  background-color: #00303f;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
 }
@@ -481,11 +492,12 @@ table {
   border: 3px solid #00303f;
   padding: 15px 30px;
   display: block;
-  margin: 20px;
+  margin-top: 20px;
+
 }
 
 .deleteButton:hover {
-  background-color: #E82C0C;
+  background-color: #319B86;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
 }
@@ -528,6 +540,17 @@ table {
   border: 2px solid #7A9D96;
   border-radius: 4px;
   margin: 5px 0px;
+  width: 100%;
+  height: 50px;
+}
+
+.selectInputEdit {
+    font-family: Lato;
+    font-size: 16px;
+    display: block;
+    border: 2px solid #7A9D96;
+    border-radius: 4px;
+    margin: 5px 0px;
 }
 
 .selectInput:focus {
@@ -539,8 +562,8 @@ table {
   border-top: 0px;
 }
 
-.fileSelection {
-
+.lists {
+ width: 100%;
 }
 
 .imageChange {
@@ -554,9 +577,63 @@ table {
 
 .imageChange img {
   border-radius: 5px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border: 5px solid #DCAE1D;
 }
 
+.imageSave {
+  margin-top: 10px;
+}
+
+.Lato-Hairline {
+  font-family: Lato-Hairline;
+  font-size: 28px;
+}
+
+.Lato-Thin {
+  font-family: Lato-Thin;
+  font-size: 28px;
+}
+
+.Lato {
+  font-family: Lato;
+  font-size: 28px;
+}
+
+.Lato-Bold {
+  font-family: Lato-Bold;
+  font-size: 28px;
+}
+
+.typography {
+  margin-top: 20px;
+}
+
+.styleLists li {
+  font-family: Lato-Hairline;
+  font-size: 18px;
+  color: #00303f;
+  padding-top: 5px;
+}
+
+.styleLists {
+  margin: 20px 0px;
+}
+
+.styleInputs input, .styleInputs textarea, .styleInputs select {
+  margin-bottom: 20px;
+}
+
+.yellowMan  {
+  border: 5px solid #DCAE1D;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.smallButtonCreate {
+  margin: 20px 0px;
+  display: inline-block;
+}
 /*Media Queries*/
 
 @media screen and (max-width: 460px) {
@@ -573,6 +650,34 @@ table {
 
   }
 
+  h1 {
+    font-size: 30px;
+  }
 
+  table td:first-child a {
+    color: #ffffff;
+    padding: 15px 13px;
+    background-color: #00303f;
+    position: relative;
+    top: 27px;
+    margin-right: 10px;
+    margin-left: 0px;
+
+  }
+
+  table td:nth-child(2) img {
+    width: 95px;
+  }
+
+  table td:nth-child(2) {
+  background-color: #ffffff;
+  }
+
+  table td:nth-child(3) a {
+  font-family: Lato;
+  color: #00303f;
+  font-size: 28px;
+  margin-left: 15px;
+  }
 
 }
