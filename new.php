@@ -1,26 +1,35 @@
 <?php
 
 include 'header.php';
+include 'database.php';
+
+$id = $_GET['id'];
+
+$stmt = $db->prepare('SELECT * from contacts WHERE id = :id LIMIT 1');
+$stmt->bindParam(':id', $id);
+$stmt->execute();
+
+$contact = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
 <h1>Create Contact</h1>
 
-
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
 
-      <img src="uploads/<?= $contact['photo']; ?>" width="100px" height="auto">
 
-      <form action="upload.php" method="POST" enctype="multipart/form-data">
-        <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
-         <p>Add a Contact Image:</p>
-          <input type="file" name="photo" id="photo"/>
-          <input class="smallButton" type="submit" value="Update Image" name="submit">
-      </form>
+      <?php
+      if ($contact['photo'] !== '') {
+          echo "<img src='uploads/";  echo $contact['photo']; echo "' width='150px' height='auto'>";
+      } else {
+          echo "<img src='uploads/picIcon.png' width='150px' height='auto'>";
+      }
+      ?>
 
 <form method="POST" action="/create.php">
+  <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
 
   <div class="form-group title">
     <label for="contact_title">Title</label>

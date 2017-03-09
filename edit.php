@@ -23,25 +23,27 @@
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
 
-<a href="/delete.php?id=<?= $contact['id']; ?>" class="btn btn-danger pull-right">Delete Contact</a>
+<a href="/delete.php?id=<?= $contact['id']; ?>" class="btn deleteButton pull-right">Delete Contact</a>
 
-<?php if ($contact['photo'] !== '') :  ?>
-<img src="uploads/<?= $contact['photo']; ?>" width="100px" height="auto">
-<?php endif; ?>
-
-<form action="upload.php" method="POST" enctype="multipart/form-data">
+<p class="inputTitles">Contact Image</p>
+<form action="upload.php" method="POST" enctype="multipart/form-data"  class="imageChange">
+  <?php if ($contact['photo'] !== '') :  ?>
+  <img src="uploads/<?= $contact['photo']; ?>" width="150px" height="auto">
+  <?php endif; ?>
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
-    Change Image:
-    <input type="file" name="photo" id="photo"/>
-    <input class="smallButton" type="submit" value="Update Image" name="submit">
+    <input class="fileSelection" type="file" name="photo" id="photo"/>
+    <input class="smallButton imageSave" type="submit" value="Save Image" name="submit">
 </form>
+
+
 
 <form method="POST" action="/update.php">
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
 
+
   <div class="form-group title">
-    <label for="contact_title">Title</label>
-    <select name="title" id="contact_title" class="form-control">
+    <label for="contact_title"><p class="inputTitles">Title</p></label>
+    <select name="title" id="contact_title" class="form-control selectInput">
       <option value="Mr" <?= ($contact['title'] == 'Mr') ? ' selected' : '' ?>>Mr</option>
       <option value="Mrs"<?= ($contact['title'] == 'Mrs') ? ' selected' : '' ?>>Mrs</option>
       <option value="Miss"<?= ($contact['title'] == 'Miss') ? ' selected' : '' ?>>Miss</option>
@@ -52,43 +54,43 @@
   </div>
 
   <div class="form-group firstname">
-    <label for="contact_first">First Name</label>
-    <input class="form-control" type="text" name="first" id="contact_first" value="<?= $contact['first']; ?>" />
+    <label for="contact_first"><p class="inputTitles">First Name</p></label>
+    <input class="form-control inputField" type="text" name="first" id="contact_first" value="<?= $contact['first']; ?>" />
   </div>
 
   <div class="form-group lastname">
-    <label for="contact_last">Last Name</label>
-    <input class="form-control" type="text" name="last" id="contact_last" value="<?= $contact['last']; ?>" />
+    <label for="contact_last"><p class="inputTitles">Last Name</p></label>
+    <input class="form-control inputField" type="text" name="last" id="contact_last" value="<?= $contact['last']; ?>" />
   </div>
 
   <div class="form-group address">
-    <label for="contact_address">Address</label>
-    <input class="form-control" type="text" name="address" id="contact_address" value="<?= $contact['address']; ?>" />
+    <label for="contact_address"><p class="inputTitles">Address</p></label>
+    <input class="form-control inputField" type="text" name="address" id="contact_address" value="<?= $contact['address']; ?>" />
   </div>
 
   <div class="form-group city">
-    <label for="contact_city">City</label>
-    <input class="form-control" type="text" name="city" id="contact_city" value="<?= $contact['city']; ?>" />
+    <label for="contact_city"><p class="inputTitles">City</p></label>
+    <input class="form-control inputField" type="text" name="city" id="contact_city" value="<?= $contact['city']; ?>" />
   </div>
 
   <div class="form-group state">
-    <label for="contact_state">State</label>
-    <input class="form-control" type="text" name="state" id="contact_state" value="<?= $contact['state']; ?>" />
+    <label for="contact_state"><p class="inputTitles">State</p></label>
+    <input class="form-control inputField" type="text" name="state" id="contact_state" value="<?= $contact['state']; ?>" />
   </div>
 
   <div class="form-group zipcode">
-    <label for="zip">Zip Code</label>
-    <input class="form-control" type="text" name="zip" id="contact_zip" value="<?= $contact['zip']; ?>" />
+    <label for="zip"><p class="inputTitles">Zip Code</p></label>
+    <input class="form-control inputField" type="text" name="zip" id="contact_zip" value="<?= $contact['zip']; ?>" />
   </div>
 
   <div class="form-group phone">
-    <label for="phone">Phone</label>
-    <input class="form-control" type="text" name="phone" id="contact_phone" value="<?= $contact['phone']; ?>" />
+    <label for="phone"><p class="inputTitles">Phone</p></label>
+    <input class="form-control inputField" type="text" name="phone" id="contact_phone" value="<?= $contact['phone']; ?>" />
   </div>
 
   <div class="form-group notes">
-    <label for="notes">Notes</label>
-    <textarea class="form-control" type="textarea" name="notes" id="contact_notes" ><?= $contact['notes']; ?></textarea>
+    <label for="notes"><p class="inputTitles">Notes</p></label>
+    <textarea class="form-control textareaInput" type="textarea" name="notes" id="contact_notes" ><?= $contact['notes']; ?></textarea>
   </div>
 
 

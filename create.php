@@ -2,13 +2,12 @@
 
 include 'database.php';
 
-$stmt = $db->prepare("INSERT INTO contacts
-  (first, last, address, city, state, zip, phone, notes)
-  VALUES
-  (:first, :last, :address, :city, :state, :zip, :phone, :notes)
-");
 
+$stmt = $db->prepare('UPDATE contacts SET title= :title, first = :first, last = :last, address= :address, city = :city, state = :state, zip = :zip, phone = :phone, notes = :notes WHERE id = :id');
+//$stmt->bindParam
 $stmt->execute(array(
+  ':id' => $_POST['id'],
+  ':title' => $_POST['title'],
   ':first' => $_POST['first'],
   ':last' => $_POST['last'],
   ':address' => $_POST['address'],
@@ -17,11 +16,12 @@ $stmt->execute(array(
   ':zip' => $_POST['zip'],
   ':phone' => $_POST['phone'],
   ':notes' => $_POST['notes'],
+
 ));
 
-$id = $db->lastInsertID();
 
-header('location: http://localhost:8888/edit.php?id=' . $id . '&created=true');
+
+header('location: http://localhost:8888/edit.php?id=' . $_POST['id']);
 
 
  ?>

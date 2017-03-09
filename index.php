@@ -19,7 +19,13 @@
   <tbody class="tableStyle">
     <tr>
       <td class="id"><a href="/edit.php?id=<?= $contact['id']; ?>"><?= $contact['id']; ?></a></td>
-      <td><a class="image" href="/edit.php?id=<?= $contact['id'];?>"><img src="uploads/<?= $contact['photo']; ?>"></a></td>
+      <td><a class="image" href="/edit.php?id=<?= $contact['id'];?>"><?php
+      if ($contact['photo'] !== '') {
+          echo "<img src='uploads/";  echo $contact['photo']; echo "' width='150px' height='auto'>";
+      } else {
+          echo "<img src='uploads/picIcon.png' width='150px' height='auto'>";
+      }
+      ?></a></td>
       <td><a href="/edit.php?id=<?= $contact['id'];?>"><?= $contact['first'] . " " . $contact['last'];?></a></td>
     </tr>
         <tr class="innerInfo">
