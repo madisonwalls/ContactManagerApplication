@@ -15,6 +15,7 @@ $contact = $stmt->fetch(PDO::FETCH_ASSOC);
 
 <h1>Step 2: Create Contact</h1>
 
+<!-- New Contact form -->
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">

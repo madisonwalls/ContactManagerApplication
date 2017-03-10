@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
+    
+    <!-- Navigation Bar-->
     <div class="container-fluid navtop">
 
       <div class="row">

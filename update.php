@@ -1,7 +1,8 @@
 <?php
 
-
 include 'database.php';
+
+//Updates all content from the edit page//
 
 $stmt = $db->prepare('UPDATE contacts SET title= :title, first = :first, last = :last, address= :address, city = :city, state = :state, zip = :zip, phone = :phone, notes = :notes WHERE id = :id');
 //$stmt->bindParam

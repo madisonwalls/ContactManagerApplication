@@ -4,6 +4,8 @@ include 'header.php';
 
 ?>
 
+<!--StyleGuide-->
+
 <h1>Style Guide</h1>
 <div class="container">
   <div class="row">
@@ -114,3 +116,9 @@ include 'header.php';
   </div>
 
 </div>
+
+<?php
+
+include 'footer.php';
+
+?>

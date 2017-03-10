@@ -2,7 +2,7 @@
 
 include 'database.php';
 
-
+// Creates file name
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["photo"]["name"]);
 $uploadOk = 1;
@@ -45,6 +45,7 @@ if ($uploadOk == 0) {
     }
 }
 
+// Creates new ID for new contacts 
 $stmt = $db->prepare('UPDATE contacts SET photo = :photo WHERE id = :id');
 //$stmt->bindParam
 $stmt->execute(array(

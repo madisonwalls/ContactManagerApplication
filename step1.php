@@ -6,6 +6,7 @@ include 'header.php';
 
 <h1>Step 1: Choose Image</h1>
 
+<!--Upload Image Page --> 
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
