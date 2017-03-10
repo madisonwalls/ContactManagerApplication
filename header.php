@@ -27,7 +27,7 @@
         <div class="col-xl-12 navbar">
           <ul>
             <a href="index.php"><li>All Contacts</li></a>
-            <a href="step1.php"><li>Create</li></a>
+            <a href="step1.php"><li>New Contact</li></a>
             <a href="styleguide.php"><li>Style Guide</li></a>
         </ul>
         </div>

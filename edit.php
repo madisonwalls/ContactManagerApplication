@@ -12,16 +12,18 @@
 
 ?>
 
-<?php if (array_key_exists('updated', $_GET)) : ?>
-<div class="alert alert-success">
-  <p><strong>Update successful!</strong> Your photo was updated.</p>
-</div>
-<?php endif; ?>
+
 
 <h1>Edit Contact</h1>
 <div class="container">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
+
+      <?php if (array_key_exists('updated', $_GET)) : ?>
+      <div class="alert alert-success">
+        <p><strong>Update Successful!</strong> Your contact is updated.</p>
+      </div>
+      <?php endif; ?>
 
 <a href="/delete.php?id=<?= $contact['id']; ?>" class="btn deleteButton pull-right">Delete Contact</a>
 
@@ -31,12 +33,17 @@
   if ($contact['photo'] !== '') {
       echo "<img src='uploads/";  echo $contact['photo']; echo "' width='150px' height='auto'>";
   } else {
-      echo "<img src='uploads/picIcon.png' width='150px' height='auto'>";
+      echo "<img class='yellowMan' src='uploads/picIcon.png' width='150px' height='auto'>";
   }
   ?>
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
     <input class="fileSelection" type="file" name="photo" id="photo"/>
-    <input class="smallButton imageSave" type="submit" value="Save Image" name="submit">
+    <input class="regularButton imageSave" type="submit" value="Save Image" name="submit">
+    <?php if (array_key_exists('photoUpdated', $_GET)) : ?>
+    <div class="alert alert-success">
+      <p><strong>Update Successful!</strong>Your photo is updated.</p>
+    </div>
+    <?php endif; ?>
 </form>
 
 

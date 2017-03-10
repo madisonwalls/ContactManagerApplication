@@ -419,7 +419,7 @@ table {
   padding: 50px 0px;
 }
 
-.regularButton {
+.regularButton, .regularButtonCreate {
   border: none;
   background-color: #659ba8;
   color: #ffffff;
@@ -433,14 +433,14 @@ table {
   margin-top: 20px;
 }
 
-.regularButton:hover {
+.regularButton:hover, .regularButtonCreate:hover {
   background-color: #00303f;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
   display: block;
 }
 
-.smallButton, .smallButtonCreate {
+.smallButton {
   border: none;
   background-color: #659ba8;
   color: #ffffff;
@@ -454,7 +454,7 @@ table {
   margin-top: 0px;
 }
 
-.smallButton:hover, .smallButtonCreate:hover {
+.smallButton:hover {
   background-color: #00303f;
   transition: all 0.4s ease-in-out;
   color: #ffffff;
@@ -630,13 +630,24 @@ table {
   border-radius: 5px;
 }
 
-.smallButtonCreate {
+.regularButtonCreate {
   margin: 20px 0px;
   display: inline-block;
 }
+
+.regularButtonCreate:hover {
+  margin: 20px 0px;
+  display: inline-block;
+}
+
+input[type=file] {
+  padding: 15px 0px;
+}
+
 /*Media Queries*/
 
 @media screen and (max-width: 460px) {
+
 
   .navbar li {
     display: inline-block;
@@ -670,14 +681,65 @@ table {
   }
 
   table td:nth-child(2) {
-  background-color: #ffffff;
+    background-color: #ffffff;
   }
 
   table td:nth-child(3) a {
-  font-family: Lato;
-  color: #00303f;
-  font-size: 28px;
-  margin-left: 15px;
+    font-size: 28px;
+    margin-left: 8px;
+  }
+
+  .innerInfo td:nth-child(2) {
+    font-size: 14px;
+  }
+
+  .innerInfo td:nth-child(3) a {
+    font-size: 14px;
+  }
+
+  .yellowMan {
+    margin: auto;
+    display: block;
+  }
+
+  .title {
+    width: 23%;
+  }
+
+  .firstname {
+    width: 72%;
+  }
+
+  .lastname {
+    width: 100%;
+  }
+
+  .address {
+    width: 100%;
+  }
+
+  .city {
+    width: 60%;
+  }
+
+  .state {
+    width: 36%;
+  }
+
+  .zipcode {
+    width: 100%;
+  }
+
+  .phone {
+    width: 100%;
+  }
+
+  .notes {
+    width: 100%;
+  }
+
+  .deleteButton {
+    float: left;
   }
 
 }

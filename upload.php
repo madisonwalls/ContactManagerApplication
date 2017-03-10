@@ -25,11 +25,8 @@ if (file_exists($target_file)) {
 
     $uploadOk = 0;
 }
-// Check file size
-if ($_FILES["photo"]["size"] > 5000000) {
 
-    $uploadOk = 0;
-}
+
 // Allow certain file formats
 if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
 && $imageFileType != "gif" && $imageFileType != "PNG" && $imageFileType != "JPG") {
@@ -55,7 +52,7 @@ $stmt->execute(array(
   ':photo' => basename($_FILES["photo"]["name"]),
 ));
 
-header('Location: http://localhost:8888/edit.php?updated=true&id=' . $_POST['id']);
+header('Location: http://localhost:8888/edit.php?photoUpdated=true&id=' . $_POST['id']);
 
 
 ?>

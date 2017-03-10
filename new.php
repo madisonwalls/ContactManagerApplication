@@ -13,7 +13,7 @@ $contact = $stmt->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
-<h1>Create Contact</h1>
+<h1>Step 2: Create Contact</h1>
 
 <div class="container">
   <div class="row">
@@ -22,11 +22,14 @@ $contact = $stmt->fetch(PDO::FETCH_ASSOC);
 
       <?php
       if ($contact['photo'] !== '') {
-          echo "<img src='uploads/";  echo $contact['photo']; echo "' width='150px' height='auto'>";
+          echo "<img class='yellowMan' src='uploads/";  echo $contact['photo']; echo "' width='150px' height='auto'>";
       } else {
           echo "<img class='yellowMan' src='uploads/picIcon.png' width='150px' height='auto'>";
       }
       ?>
+      <div class="alert alert-success">
+        <p><strong>Your Image Has Been Saved!</strong> Add more contact information below.</p>
+      </div>
 
 <form method="POST" action="/create.php">
   <input type="hidden" name="id" id="contact_id" value="<?= $contact['id']; ?>" />
@@ -75,7 +78,7 @@ $contact = $stmt->fetch(PDO::FETCH_ASSOC);
 
     <div class="form-group phone">
       <label for="phone"><p class="inputTitles">Phone</p></label>
-      <input class="form-control inputField" type="text" name="phone" id="contact_phone" value="" placeholder="Phone" />
+      <input class="form-control inputField" type="text" name="phone" id="contact_phone" value="" placeholder="(xxx)-xxx-xxxx" />
     </div>
 
     <div class="form-group notes">

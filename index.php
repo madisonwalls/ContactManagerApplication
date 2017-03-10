@@ -13,7 +13,11 @@
     <div class="row">
 
       <div class="col-xs-12 col-md-9 col-md-offset-3 tableContainer">
-
+        <?php if (array_key_exists('created', $_GET)) : ?>
+        <div class="alert alert-success">
+          <p><strong>New Contact Created!</strong> Added to your contact list.</p>
+        </div>
+        <?php endif; ?>
 <table class="table">
   <?php foreach($contacts as $contact) : ?>
   <tbody class="tableStyle">

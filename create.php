@@ -21,7 +21,7 @@ $stmt->execute(array(
 
 
 
-header('location: http://localhost:8888/edit.php?id=' . $_POST['id']);
+header('location: http://localhost:8888/index.php?created=true');
 
 
  ?>
