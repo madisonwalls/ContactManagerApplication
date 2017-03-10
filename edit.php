@@ -24,8 +24,9 @@
         <p><strong>Update Successful!</strong> Your contact is updated.</p>
       </div>
       <?php endif; ?>
-
+<div class="hidden-xs">
 <a href="/delete.php?id=<?= $contact['id']; ?>" class="btn deleteButton pull-right">Delete Contact</a>
+</div>
 
 <p class="inputTitles">Contact Image</p>
 <form action="upload.php" method="POST" enctype="multipart/form-data"  class="imageChange">
@@ -106,6 +107,10 @@
 
 
   <button class="btn regularButton">Save Contact</button>
+
+
+  <a href="/delete.php?id=<?= $contact['id']; ?>" class="btn deleteButton hidden-sm hidden-md hidden-lg ">Delete Contact</a>
+  </div>
 
 </form>
 

@@ -18,9 +18,7 @@
     src: url(../fonts/Lato-Bold.ttf);
 }
 
-body {
-  padding-bottom: 30px;
-}
+
 
 a:hover {
   text-decoration: none;
@@ -416,7 +414,7 @@ table {
 }
 
 .buttons {
-  padding: 50px 0px;
+  padding: 50px 15px;
 }
 
 .regularButton, .regularButtonCreate {
@@ -644,6 +642,38 @@ input[type=file] {
   padding: 15px 0px;
 }
 
+.footerSpace {
+  background-color: #00303f;
+  margin-top: 40px;
+  padding: 15px;
+
+}
+
+.footerSpace a {
+  color: #ffffff;
+
+}
+
+.footerSpace p {
+  color: #cccccc;
+  text-align: center;
+
+}
+
+
+.footerSpace a:hover {
+  text-decoration: underline;
+  color: #DCAE1D;
+}
+
+.bottomNav a {
+  padding-left: 15px;
+}
+
+.bottomNav {
+  text-align: center;
+}
+
 /*Media Queries*/
 
 @media screen and (max-width: 460px) {
@@ -652,7 +682,7 @@ input[type=file] {
   .navbar li {
     display: inline-block;
     margin-right: 0px;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 0px;
     padding-top: 10px;
     padding-right: 20px;
@@ -739,7 +769,15 @@ input[type=file] {
   }
 
   .deleteButton {
-    float: left;
+    display: inline-block;
+    padding: 8px 30px;
+    float: right;
   }
+
+  .regularButton {
+    display: inline-block;
+
+  }
+
 
 }
