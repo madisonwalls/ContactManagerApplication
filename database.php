@@ -9,5 +9,5 @@ if (!ini_get('display_errors')) {
 
 //Access to database//
 
-$db = new PDO('mysql:host=localhost;dbname=app;charset=utf8mb4', 'root', 'root');
+$db = new PDO('mysql:host=localhost;dbname=madisonw_contactapp;charset=utf8mb4', 'madisonw_contact', 'm,ui)p6+*~Q5');
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
